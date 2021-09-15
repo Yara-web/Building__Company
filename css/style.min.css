@@ -3694,12 +3694,66 @@ label {
   max-width: 100%;
 }
 
+.work-do__body {
+  padding-top: 180px;
+  padding-bottom: 130px;
+}
+@media (max-width: 1500px) {
+  .work-do__body {
+    padding-top: calc(90px + 90 * ((100vw - 320px) / 1180));
+  }
+}
+@media (max-width: 1500px) {
+  .work-do__body {
+    padding-bottom: calc(90px + 40 * ((100vw - 320px) / 1180));
+  }
+}
+.work-do__title {
+  text-align: center;
+  margin: 0px 0px 1.6em 0px;
+}
+.work-do__items-number {
+  margin-bottom: 70px;
+}
+@media (max-width: 1500px) {
+  .work-do__items-number {
+    margin-bottom: calc(90px + -20 * ((100vw - 320px) / 1180));
+  }
+}
+.work-do__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.work-do__sub-title {
+  margin: 0px 0px 2.2727272727em 0px;
+  font-size: 22px;
+  line-height: 127.2727272727%;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}
+@media (max-width: 479.98px) {
+  .work-do__sub-title {
+    display: none;
+  }
+}
+.work-do__button {
+  text-align: center;
+  padding: 13px 50px;
+}
+
 .items-number {
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: -2;
-  gap: 20px;
+  gap: 10px;
+}
+@media (max-width: 767.98px) {
+  .items-number {
+    flex-direction: column;
+  }
 }
 .items-number__item {
   flex: 1 1 33.333%;
@@ -3730,6 +3784,239 @@ label {
   z-index: 21;
 }
 
+.our-client {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-top: 110px;
+  background-color: #0E0E0E;
+}
+@media (max-width: 1500px) {
+  .our-client {
+    padding-top: calc(60px + 50 * ((100vw - 320px) / 1180));
+  }
+}
+@media (max-width: 991.98px) {
+  .our-client {
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 991.98px) and (max-width: 1500px) {
+  .our-client {
+    padding-bottom: calc(90px + 10 * ((100vw - 320px) / 1180));
+  }
+}
+.our-client__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+.our-client__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+@media (max-width: 1500px) {
+  .our-client__header {
+    margin-bottom: calc(40px + 20 * ((100vw - 320px) / 1180));
+  }
+}
+@media (max-width: 991.98px) {
+  .our-client__title {
+    line-height: 113.3333333333%;
+  }
+}
+.our-client__button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 40px;
+  font-size: 18px;
+  line-height: 166.6666666667%;
+}
+.our-client__card-client {
+  margin-bottom: 30px;
+}
+@media (max-width: 1500px) {
+  .our-client__card-client {
+    margin-bottom: calc(30px + 0 * ((100vw - 320px) / 1180));
+  }
+}
+
+.card-client {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 430px));
+  grid-auto-flow: row;
+  justify-content: center;
+}
+@media (max-width: 991.98px) {
+  .card-client {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+  }
+}
+@media (max-width: 767.98px) {
+  .card-client {
+    grid-template-columns: repeat(1, minmax(280px, 1fr));
+  }
+}
+.card-client__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+@media (any-hover: hover) {
+  .card-client__item:hover .card-client__logo {
+    display: none;
+  }
+}
+.card-client__img {
+  padding: 0px 0px 81.8181818182% 0px;
+  /* padding: 0px 0px 81% 0px; */
+}
+@media (max-width: 991.98px) {
+  .card-client__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 21;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+    text-align: center;
+    padding: 0px 20px;
+  }
+}
+@media (max-width: 991.98px) and (any-hover: hover) {
+  .card-client__body:hover {
+    z-index: 50;
+    background-color: rgba(228, 181, 100, 0.7);
+    opacity: 1;
+  }
+}
+@media (max-width: 991.98px) and (any-hover: none) {
+  .card-client__body {
+    opacity: 1;
+  }
+}
+@media (min-width: 991.98px) {
+  .card-client__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+    text-align: center;
+    padding: 0px 20px;
+  }
+}
+@media (min-width: 991.98px) and (any-hover: hover) {
+  .card-client__content:hover {
+    z-index: 50;
+    background-color: rgba(228, 181, 100, 0.7);
+    opacity: 1;
+  }
+}
+@media (min-width: 991.98px) and (any-hover: none) {
+  .card-client__content {
+    opacity: 1;
+  }
+}
+@media (any-hover: hover) {
+  .card-client__more {
+    display: none;
+  }
+}
+@media (min-width: 991.98px) {
+  .card-client__more {
+    display: none;
+  }
+}
+@media (any-hover: none) {
+  .card-client__more {
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 173.6842105263%;
+    text-align: center;
+    color: #E4B564;
+  }
+}
+@media (any-hover: none) {
+  .card-client__logo {
+    display: none;
+  }
+}
+@media (any-hover: hover) {
+  .card-client__logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.card-client__content_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 90px;
+  height: 70px;
+  margin: 0px auto 15px auto;
+}
+.card-client__title {
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 133.3333333333%;
+  color: #fff;
+}
+@media (max-width: 1500px) {
+  .card-client__title {
+    font-size: calc(19px + 2 * ((100vw - 320px) / 1180));
+  }
+}
+@media (max-width: 991.98px) {
+  .card-client__title {
+    font-size: 19px;
+    margin: 0px 0px 0.5263157895em 0px;
+  }
+}
+.card-client__adress {
+  font-size: 21px;
+  line-height: 133.3333333333%;
+  color: #fff;
+}
+@media (max-width: 1500px) {
+  .card-client__adress {
+    font-size: calc(19px + 2 * ((100vw - 320px) / 1180));
+  }
+}
+@media (max-width: 991.98px) {
+  .card-client__adress {
+    font-size: 19px;
+  }
+}
+@media (any-hover: none) {
+  .card-client__adress {
+    display: none;
+  }
+}
 /*! nouislider - 14.6.0 - 6/27/2020 */
 /* Functional styling;
  * These styles are required for noUiSlider to function.
